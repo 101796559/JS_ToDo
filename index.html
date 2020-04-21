@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS To-do</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contents">
+        <div class="input">
+            <form method="dialog" onsubmit="addItem()">
+                <input type="text" id="input_field">
+                <button type="submit">Add</button>
+            </form>
+            <button onclick="clearAll()">Clear all</button>
+        </div>
+        <div class="items">
+            <ul id="todo_list"></ul>
+        </div>
+    </div>
+
+    <div class="categorized">
+        <div class="inputs">
+            <form method="dialog" onsubmit="addCategorizedItem()">
+                <input type="text" id="text_input">
+                <select id="category_selector">
+                    <option value="cat1">cat1</option>
+                    <option value="cat2">cat2</option>
+                    <option value="cat3">cat3</option>
+                </select>
+            </form>
+            <button onclick="clearAllCategorized()">Clear all</button>
+        </div>
+        <div class="cat">
+            <h3>cat1</h3>
+            <ul id="cat1"></ul>
+        </div>
+        <div class="cat">
+            <h3>cat2</h3>
+            <ul id="cat2"></ul>
+        </div>
+        <div class="cat">
+            <h3>cat3</h3>
+            <ul id="cat3"></ul>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
